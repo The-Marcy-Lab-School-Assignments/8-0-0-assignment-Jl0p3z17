@@ -23,7 +23,7 @@ const sendDataResponse = (req, res, next) => {
 }
 
 //endpoints
-app.get('/html', sendHtmlResponse);
+app.get('/', sendHtmlResponse);
 app.get('/data', sendDataResponse);
 app.get('/file', sendFile);
 app.get('/fileresponse', sendFileResponse);
