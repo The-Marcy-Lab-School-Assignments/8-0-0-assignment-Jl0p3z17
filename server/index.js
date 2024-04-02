@@ -17,8 +17,9 @@ const sendFileResponse = (req, res, next) => {
 }
 
 const sendDataResponse = (req, res, next) => {
+    const name = req.query.name || 'Guest'
     const data = [{ name: 'Chris' }, { name: 'Killian' }, { name: 'Willy' }];
-    res.send(data);
+    res.send({ message: `Hello,${name}!`, data: data });
 }
 
 //endpoints
