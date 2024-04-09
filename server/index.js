@@ -24,8 +24,12 @@ const sendDataResponse = (req, res, next) => {
 
 //endpoints
 app.get('/', sendHtmlResponse);
-app.get('/data', sendDataResponse);
 app.get('/file', sendFile);
+
+/* FEEDBACK: These two endpoints send data back to 
+the client while the two above send back HTML. For these
+endpoints, start them with `/api/` */
+app.get('/data', sendDataResponse);
 app.get('/fileresponse', sendFileResponse);
 
 
